@@ -45,9 +45,9 @@ function sellBook(inventory, bookTitle) {
 
 ```javascript
 
-`function listAllAuthors(inventory) {
+function listAllAuthors(inventory) {
     const authors = inventory.map(b => b.author);
-    return [...new Set(authors)]; // Returns unique authors
+    return authors.filter((author, index) => authors.indexOf(author) === index); // Returns unique authors
 }
 ```
 
